@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.target=HW108
-comment0.text=\n\ Homework\ 1/8/20\n\n\ @author\ (Emily\ Greene)\n\ @version\ (109)\n
+comment0.target=Reverse
+comment0.text=\r\n\ Homework\ 1/8/20\r\n\r\n\ @author\ (Emily\ Greene)\r\n\ @version\ (109)\r\n
 comment1.params=
-comment1.target=HW108()
+comment1.target=Reverse()
 comment2.params=list
 comment2.target=java.util.ArrayList\ reverseList(java.util.ArrayList)
 comment3.params=list

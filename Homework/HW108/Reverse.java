@@ -5,10 +5,12 @@ import java.util.ArrayList;
  * @author (Emily Greene)
  * @version (109)
  */
-public class HW108
+public class Reverse
 {
+    //instance variables
+    
     //constructor
-    public HW108()
+    public Reverse()
     {
     }
     //method that takes in an arraylist of strings and reverses the order
