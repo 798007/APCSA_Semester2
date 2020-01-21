@@ -8,7 +8,7 @@ public class StaticBinding
   {
 		Object o = new String("dog");
 
-		int len = o.length();	//syntax error
+		int len = ((String)o).length();	//syntax error
 													//object has no length
 
 		int lenny = ((String)o).length();   //add a cast
