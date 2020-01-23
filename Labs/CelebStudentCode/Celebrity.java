@@ -8,11 +8,11 @@ public class Celebrity
     /**
      * The clue to determine the celebrity
      */
-    private String clue = "";
+    private String clue;
     /**
      * The answer or name of the celebrity.
      */
-    private String celeb = "";
+    private String celeb;
     
     /**
      * Creates a Celebrity instance with the supplied answer and clue
@@ -23,7 +23,6 @@ public class Celebrity
     {
         this.clue = clue;
         celeb = answer;
-        Celebrity c = new Celebrity(celeb, this.clue);
     }
 
     /**
@@ -68,7 +67,7 @@ public class Celebrity
     @Override
     public String toString()
     {
-        return null;
+        return ("The answer is " + celeb + " and the clue is " + clue);
     }
     
 }
