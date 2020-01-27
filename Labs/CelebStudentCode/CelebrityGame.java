@@ -26,8 +26,7 @@ public class CelebrityGame
     public CelebrityGame(){
         gameWindow = new CelebrityFrame(this);
         celebGameList = new ArrayList<Celebrity>();
-        gameCelebrity = new Celebrity("Brad Pitt", "The prettiest man alive");
-        celebGameList.add(gameCelebrity);
+        prepareGame();
     }
 
     /**
@@ -48,9 +47,9 @@ public class CelebrityGame
      */
     public boolean processGuess(String guess)
     {
-        if(guess.trim().equalsIgnoreCase(gameCelebrity.getAnswer())){
+        if(guess.trim().equalsIgnoreCase(gameCelebrity.getAnswer().trim())){
             if(celebGameList.size() >= 1){
-                celebGameList.remove(gameCelebrity);
+                celebGameList.remove(celebGameList.indexOf(gameCelebrity.getAnswer()));
             }else{
                 gameCelebrity = new Celebrity("", "");
             }
@@ -84,8 +83,8 @@ public class CelebrityGame
      */
     public void addCelebrity(String name, String guess, String type)
     {
-        Celebrity celeb = new Celebrity("Brad Pitt", "The prettiest man alive");
-        celebGameList.add(celeb);
+        gameCelebrity = new Celebrity(name, guess);
+        celebGameList.add(gameCelebrity);
     }
 
     /**
