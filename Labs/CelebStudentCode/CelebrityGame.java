@@ -48,6 +48,14 @@ public class CelebrityGame
      */
     public boolean processGuess(String guess)
     {
+        if(guess.trim().equalsIgnoreCase(gameCelebrity.getAnswer())){
+            if(celebGameList.size() >= 1){
+                celebGameList.remove(gameCelebrity);
+            }else{
+                gameCelebrity = new Celebrity("", "");
+            }
+            return true;
+        }
         return false;
     }
 
@@ -58,7 +66,10 @@ public class CelebrityGame
      */
     public void play()
     {
-        
+        if(celebGameList != null && celebGameList.size() > 0){
+            this.gameCelebrity = celebGameList.get(0);
+            gameWindow.replaceScreen("GAME");
+        }
     }
 
     /**
@@ -73,7 +84,8 @@ public class CelebrityGame
      */
     public void addCelebrity(String name, String guess, String type)
     {
-        
+        Celebrity celeb = new Celebrity("Brad Pitt", "The prettiest man alive");
+        celebGameList.add(celeb);
     }
 
     /**
@@ -113,7 +125,7 @@ public class CelebrityGame
      */
     public int getCelebrityGameSize()
     {
-        return 0;
+        return celebGameList.size();
     }
 
     /**
@@ -124,7 +136,7 @@ public class CelebrityGame
      */
     public String sendClue()
     {
-        return null;
+        return gameCelebrity.getClue();
     }
 
     /**

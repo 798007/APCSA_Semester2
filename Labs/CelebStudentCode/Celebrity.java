@@ -12,7 +12,7 @@ public class Celebrity
     /**
      * The answer or name of the celebrity.
      */
-    private String celeb;
+    private String answer;
     
     /**
      * Creates a Celebrity instance with the supplied answer and clue
@@ -22,7 +22,12 @@ public class Celebrity
     public Celebrity(String answer, String clue)
     {
         this.clue = clue;
-        celeb = answer;
+        this.answer = answer;
+    }
+    
+    public Celebrity(){
+        clue = "";
+        answer = "";
     }
 
     /**
@@ -40,7 +45,7 @@ public class Celebrity
      */
     public String getAnswer()
     {
-        return celeb;
+        return answer;
     }
 
     /**
@@ -58,7 +63,7 @@ public class Celebrity
      */
     public void setAnswer(String answer)
     {
-        celeb = answer;
+        this.answer = answer;
     }
     
     /**
@@ -67,7 +72,7 @@ public class Celebrity
     @Override
     public String toString()
     {
-        return ("The answer is " + celeb + " and the clue is " + clue);
+        return ("The answer is " + answer + " and the clue is " + clue);
     }
     
 }
