@@ -1,6 +1,6 @@
 import java.util.*;
 /**
- * Write a description of class LiteratureCelebrity here.
+ * LiteratureCelebrity Class
  *
  * @author (Emily Greene)
  * @version (128)
@@ -27,9 +27,9 @@ public class LiteratureCelebrity extends Celebrity
      */
     public LiteratureCelebrity(String answer, String clue)
     {
+        super(answer, clue);
         this.clue = clue;
         this.answer = answer;
-        
     }
     
     public LiteratureCelebrity(){

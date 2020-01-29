@@ -107,6 +107,8 @@ public class CelebrityGame
     Celebrity currentCelebrity;
     if(type.equals("Literature")){
         currentCelebrity = new LiteratureCelebrity(name, guess);
+    }else if(type.equals("Cartoon")){
+        currentCelebrity = new CartoonCelebrity(name, guess);
     }else{
         currentCelebrity = new Celebrity(name, guess);
     }
@@ -131,21 +133,11 @@ public class CelebrityGame
     return validCelebrity;
   }
   
-  public boolean validateCelebrity2(String name)
-  {
-    if (name.trim().length() >= 4)
-    {
-      return true;
-    }
-    
-    return false;
-  }
-  
    /**
    * Checks that the supplied clue has at least 10 characters or is a series of clues
    * This method will be expanded based on your subclass of Celebrity.
    * @param clue The text of the clue(s)
-   * @param type Supports a subclass of Celebrity (LiteratureCelebrity)
+   * @param type Supports a subclass of Celebrity (LiteratureCelebrity and CartoonCelebrity)
    * @return If the clue is valid.
    */
   public boolean validateClue(String clue, String type)
@@ -161,21 +153,17 @@ public class CelebrityGame
           }else{
               validClue = false;
           }
+      }else if(type.equalsIgnoreCase("cartoon")){
+          String[] temp2 = clue.split(",");
+          if(temp2.length > 1){
+              validClue = true;
+          }else{
+              validClue = false;
+          }
       }
-    }else{
-        validClue = false;
+      return validClue;
     }
     return validClue;
-  }
-  
-  public boolean validateClue2(String clue, String type)
-  {
-    if (clue.trim().length() >= 10)
-    {
-      return true;
-    }
-    
-    return false;
   }
   
   /**

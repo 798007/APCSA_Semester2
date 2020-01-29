@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=CartoonCelebrity
+comment0.text=\r\n\ CartoonCelebrity\ Class\r\n\r\n\ @author\ (Emily\ Greene)\r\n\ @version\ (129)\r\n
+comment1.params=answer\ clue
+comment1.target=CartoonCelebrity(java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Creates\ a\ Cartoon\ Celebrity\ instance\ with\ the\ supplied\ answer\ and\ clue\r\n\ @param\ answer\r\n\ @param\ clue\r\n
+comment2.params=
+comment2.target=CartoonCelebrity()
+comment3.params=
+comment3.target=java.lang.String\ getClue()
+comment3.text=\r\n\ Supplies\ the\ clue\ for\ the\ cartoon\ celebrity\r\n\ @return\r\n
+comment4.params=
+comment4.target=java.lang.String\ getAnswer()
+comment4.text=\r\n\ Supplies\ the\ answer\ for\ the\ cartoon\ celebrity.\r\n\ @return\r\n
+comment5.params=clue
+comment5.target=void\ setClue(java.lang.String)
+comment5.text=\r\n\ Updates\ the\ clue\ to\ the\ provided\ String.\r\n\ @param\ clue\ The\ new\ clue.\r\n
+comment6.params=answer
+comment6.target=void\ setAnswer(java.lang.String)
+comment6.text=\r\n\ Updates\ the\ answer\ to\ the\ provided\ String.\r\n\ @param\ answer\ The\ new\ answer.\r\n
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment7.text=\r\n\ Provides\ a\ String\ representation\ of\ the\ Cartoon\ Celebrity.\r\n
+numComments=8

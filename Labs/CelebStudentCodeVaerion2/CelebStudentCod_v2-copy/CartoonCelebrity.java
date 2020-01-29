@@ -1,11 +1,13 @@
+
 /**
- * Celebrity base class for the Celebrity game.
- * @author cody.henrichsen
- * @version 1.4 17/09/2018
+ * CartoonCelebrity Class
+ *
+ * @author (Emily Greene)
+ * @version (129)
  */
-public class Celebrity
+public class CartoonCelebrity extends Celebrity
 {
-    /**
+   /**
      * The clue to determine the celebrity
      */
     private String clue;
@@ -15,23 +17,24 @@ public class Celebrity
     private String answer;
     
     /**
-     * Creates a Celebrity instance with the supplied answer and clue
+     * Creates a Cartoon Celebrity instance with the supplied answer and clue
      * @param answer
      * @param clue
      */
-    public Celebrity(String answer, String clue)
+    public CartoonCelebrity(String answer, String clue)
     {
+        super(answer, clue);
         this.clue = clue;
         this.answer = answer;
     }
     
-    public Celebrity(){
+    public CartoonCelebrity(){
         clue = "";
         answer = "";
     }
 
     /**
-     * Supplies the clue for the celebrity
+     * Supplies the clue for the cartoon celebrity
      * @return
      */
     public String getClue()
@@ -40,7 +43,7 @@ public class Celebrity
     }
 
     /**
-     * Supplies the answer for the celebrity.
+     * Supplies the answer for the cartoon celebrity.
      * @return
      */
     public String getAnswer()
@@ -67,12 +70,11 @@ public class Celebrity
     }
     
     /**
-     * Provides a String representation of the Celebrity.
+     * Provides a String representation of the Cartoon Celebrity.
      */
     @Override
     public String toString()
     {
-        return ("The answer is " + answer + " and the clue is " + clue);
+        return ("The answer is " + super.getAnswer() + " and the clue is " + super.getClue());
     }
-    
 }
