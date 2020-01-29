@@ -104,13 +104,13 @@ public class CelebrityGame
    */
   public void addCelebrity(String name, String guess, String type)
   {
-    
     Celebrity currentCelebrity;
-   
-    currentCelebrity = new Celebrity(name, guess);
-  
+    if(type.equals("Literature")){
+        currentCelebrity = new LiteratureCelebrity(name, guess);
+    }else{
+        currentCelebrity = new Celebrity(name, guess);
+    }
     this.celebGameList.add(currentCelebrity);
-    
   }
   
   
@@ -151,13 +151,20 @@ public class CelebrityGame
   public boolean validateClue(String clue, String type)
   {
     boolean validClue = false;
-    
     if (clue.trim().length() >= 10)
     {
       validClue = true;
-      
+      if(type.equalsIgnoreCase("literature")){
+          String[] temp = clue.split(",");
+          if(temp.length > 1){
+            validClue = true;
+          }else{
+              validClue = false;
+          }
+      }
+    }else{
+        validClue = false;
     }
-    
     return validClue;
   }
   
