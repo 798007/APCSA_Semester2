@@ -12,5 +12,8 @@ public class DeckTester {
 		String[] suits = {"black",  "red"};
 		int[] pointValues = {11, 12, 13};
 		Deck d = new Deck(ranks, suits, pointValues);
+		d.isEmpty();
+		System.out.println(d.isEmpty());
+		System.out.println(d.size());
 	}
 }
