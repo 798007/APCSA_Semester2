@@ -13,7 +13,7 @@ public class DeckTester {
         String[] suits = {"diamonds", "hearts", "spades", "clubs"};
         int[] pointValues = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 0, 0};
             Deck d = new Deck(ranks, suits, pointValues);
-            /*
+        
         System.out.println("**** Original Deck Methods ****");
         System.out.println("  toString:\n" + d.toString());
         System.out.println("  isEmpty: " + d.isEmpty());
