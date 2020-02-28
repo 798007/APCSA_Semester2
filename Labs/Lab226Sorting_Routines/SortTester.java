@@ -32,7 +32,12 @@ public class SortTester
         selectSort();
         printList();
         //MergeSort results
-        
+        loadArray();
+        System.out.println("\n MergeSort original array:");
+        printArray();
+        mergeSort(nums, nums.length);
+        System.out.println("\n MergeSort results:");
+        printArray();
         
     }
     public static void main(){
@@ -46,6 +51,20 @@ public class SortTester
             numList.add(random);
         }
     }
+    //loads array with numbers between 1 and 100 (for merge sort)
+    public void loadArray(){
+        for(int i = 0; i < nums.length; i++){
+            int random = (int)((Math.random()*100)+1);
+            nums[i] = random;
+        }
+    }
+    //prints out array
+    public void printArray(){
+        for(int i = 0; i < nums.length; i++){
+            System.out.print(nums[i] + ", ");
+        }
+    }
+    
     //bubble sort code
     public void bubbleSort(){
         compares = 0;
@@ -97,14 +116,40 @@ public class SortTester
         System.out.println("SelectSort number of compares: " + compares);
         System.out.println("SelectSort number of swaps: " + swaps);
     }
-    
-    public void mergeSort(int[] a){
-        if(a.length < 2){
+    //merge sort code
+    public void mergeSort(int[] a, int n){
+        if(n < 2){
             return;
         }
-        int mid = a.length/2;
+        int mid = n/2;
         int[] l = new int[mid];
-        int[] r = new int[a.length - mid];
+        int[] r = new int[n - mid];
+        for(int i = 0; i < mid; i++){
+            l[i] = a[i];
+        }
+        for(int i = mid; i < n; i++){
+            r[i-mid] = a[i];
+        }
+        mergeSort(l, mid);
+        mergeSort(r, n - mid);
+        merge(a, l, r, mid, n - mid);
+    }
+    //helper method for mergesort
+    public void merge(int[] a, int[] l, int[] r, int left, int right){
+        int i = 0, j = 0, k = 0;
+        while(i < left && j < right){
+            if(l[i] <= r[j]){
+                a[k++] = l[i++];
+            }else{
+                a[k++] = r[j++];
+            }
+        }
+        while(i < left){
+            a[k++] = l[i++];
+        }
+        while(j < right){
+            a[k++]  = r[j++];
+        }
     }
     //swapping code
     public void swap(int i, int n){
