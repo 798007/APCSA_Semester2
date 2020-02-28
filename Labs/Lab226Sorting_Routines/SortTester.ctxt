@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=SortTester
-comment0.text=\n\ SortTester\ Class\n\n\ @author\ (Emily\ Greene)\n\ @version\ (1024)\n
+comment0.text=\r\n\ SortTester\ Class\r\n\r\n\ @author\ (Emily\ Greene)\r\n\ @version\ (1024)\r\n
 comment1.params=
 comment1.target=SortTester()
 comment10.params=a\ l\ r\ left\ right
