@@ -2,8 +2,8 @@
 /**
  * Write a description of class MergeSorter here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Emily Greene)
+ * @version (228)
  */
 public class MergeSorter extends Sorter
 {
