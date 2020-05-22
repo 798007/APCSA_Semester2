@@ -1,0 +1,41 @@
+#header{
+  background-color: lightgreen;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  font-size: 400%
+}
+
+.Divs{
+  background-color: #D857D1;
+  text-align: center;
+  border: 10px outset blue;
+  width: 500px;
+  height: 550px;
+  margin: 0 auto;
+}
+
+h2 {color:powderblue;
+    font-size: 200%;
+    text-align: center;
+   }
+
+body{background-color: powderblue;}
+p {font-family: fantasy;}
+
+
+ul{
+  font-family: fantasy;
+  text-align: left;
+}
+
+h3{
+  text-align: center;
+  font-size: 400%;
+  font-weight: bold;
+}
+
+img{
+  width: 400px;
+  height: 400px;
+}
